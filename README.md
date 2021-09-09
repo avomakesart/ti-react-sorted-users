@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+## React Sorting and Pagination users
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Hello candidate welcome to the challenge, please read the instructions carefully.
 
-## Available Scripts
+#### Expected results:
+1. We need to be able to show a set 4 users by default the API shows 6, so pay attention on the api schema, and add any query that you may need. https://reqres.in/api/users?per_page=4
 
-In the project directory, you can run:
+2. We need to be able to sort the users alphabetical by its name and by id,
+we have a dropdown already, so you could use it.
 
-### `yarn start`
+3. The api has pages, so we need to be able to do some basic pagination if we don't have any users in the last page, so we need to show an alert that tells the user that we don't have any users, otherwise, if we are on the first page and we click on the previous button, we need to block the pagination.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Instructions:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ 1. API Request:
+ Replace the mockdata with real data coming from the api
+https://reqres.in/api/users?per_page=4, remember that we have axios already loaded
+ Remember that we need to show a set of 4 users, the api
+ Shows 6 users by default, so maybe a query param will work
 
-### `yarn test`
+2. Sorting:
+   Create a sort functionality, that sort the give us the
+   ability to sort the users by "id" and in "alphabetical" order
+   hint: .sort() will work great.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   3.- Pagination:
+   Create a pagination feature, that should work like this:
+   The api has some values called:
+   page - this value indicates the current page
+   total - this value is the length of the users
+   total_pages - this value is length of the pages
 
-### `yarn build`
+   Test cases:
+   *If we are on the last page, we need to block the pagination,
+   and display an alert, saying that we don't have more users, and
+   if we are on the first page and we try to go to a previous page,
+   we just need to block the pagination.*
+   Having that in mind, maybe doing some params: {} in the request
+   will work just fine,
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   Create a function that change the page and shows the next 4 users
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   Create a function taht change the page and shows the previous 4 users
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+   https://reqres.in/api/users?per_page=4,
